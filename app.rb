@@ -8,6 +8,7 @@ require('./lib/palindrome')
 require('./lib/ping_pong')
 require('./lib/queen_attack')
 require('./lib/rochambeau')
+require('./lib/scrabble')
 
 configure :development do
 set :bind, '0.0.0.0'
@@ -90,7 +91,16 @@ get('/clock') do
   @c_output = [(params.fetch('c_hours')).to_i,(params.fetch('c_minutes')).to_i].clock()
   @c_output_long = (360.00 - @c_output)
   erb(:clock_show)
-end 
+end
+
+get ('/scrabble_form') do
+erb(:scrabble_form)
+end
+
+get ('/scrabble_results') do
+@score = params.fetch('word').scrabble
+erb(:scrabble_results)
+end
   
 
   
