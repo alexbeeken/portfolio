@@ -9,6 +9,8 @@ require('./lib/ping_pong')
 require('./lib/queen_attack')
 require('./lib/rochambeau')
 require('./lib/scrabble')
+require('./lib/word_frequency')
+require('./lib/highlight')
 
 configure :development do
 set :bind, '0.0.0.0'
@@ -102,5 +104,16 @@ get ('/scrabble_results') do
 erb(:scrabble_results)
 end
   
+get('/wf_form') do
+erb(:wf_form)
+end
+
+get('/wf_result') do
+@input_string = params.fetch('input_string')
+@findme = params.fetch('findme')
+@final_count = (@input_string.word_frequency(@findme))
+@input_string = @input_string.highlight(@findme)
+erb(:wf_result)
+end
 
   
