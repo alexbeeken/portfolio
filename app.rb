@@ -12,12 +12,12 @@ require('./lib/scrabble')
 require('./lib/word_frequency')
 require('./lib/highlight')
 
-=begin
+
 configure :development do
 set :bind, '0.0.0.0'
 set :port, 3000 # Not really needed, but works well with the "Preview" menu option
 end
-=end
+
 
 
 get ('/') do
