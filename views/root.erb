@@ -1,35 +1,144 @@
 <h1>Epicodus Projects</h1>
 </br>
 </br>
-<form action="/rochambeau_1p" align="center">
-  <input id="form" type="submit" value="1 Player">
+
+<div id="Rochambeau">
+  <form action="/rochambeau_result_1p" align="center">
+    <table align="center" class="table table-condensed">
+      <tr>
+        <td>
+          <div class="radio">
+          <label><input type="radio" name="object" value=0>Rock</label>
+        </div>
+      </td>
+      <td>
+        <div class="radio">
+          <label><input type="radio" name="object" value=2>Paper</label>
+        </div>
+      </td>
+      <td>
+        <div class="radio">
+          <label><input type="radio" name="object" value=1>Scissors</label>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<input class="btn btn-primary" id="submit" type="submit" value="RPS vs CPU">
 </form>
 </br>
 </br>
-<form action="/rochambeau_2p" align="center">
-  <input id="form_2p" type="submit" value="2 Player">
+<form action="/rochambeau_result_2p" align="center">
+
+  <table align="center" class="table table-condensed">
+
+    <tr>
+      <td>
+        <div class="radio">
+          <label><input type="radio" name="object" value=0>Rock</label>
+        </div>
+      </td>
+      <td>
+        <div class="radio">
+          <label><input type="radio" name="object" value=2>Paper</label>
+        </div>
+      </td>
+      <td>
+        <div class="radio">
+          <label><input type="radio" name="object" value=1>Scissors</label>
+        </div>
+      </td>
+    </tr>
+
+    <table align="center" class="table table-condensed">
+      <tr>
+        <td>
+          <div class="radio">
+            <label><input type="radio" name="object2" value=0>Rock</label>
+          </div>
+        </td>
+        <td>
+          <div class="radio">
+            <label><input type="radio" name="object2" value=2>Paper</label>
+          </div>
+        </td>
+        <td>
+          <div class="radio">
+            <label><input type="radio" name="object2" value=1>Scissors</label>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <input class="btn btn-primary" id="submit" type="submit" value="RPS 2 Player" >
+  </form>
+</br>
+</br>
+</br>
+
+<form action="/fnr_out" align="center">
+
+  <div class="form-group">
+    <label for="text">Text:</label>
+    <input id="text" name="text" class="form-control" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="find">Word to find:</label>
+    <input id="find" name="find" class="form-control" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="replacement">Word to replace it with:</label>
+    <input id="replacement" name="replacement" class="form-control" type="text">
+  </div>
+
+</br>
+
+<input class="btn btn-primary" id="submit" type="submit" value="DO IT!">
+</form>
+
+<form action='/anagram_out' align="center">
+  <div class="form-group">
+    <label for="anagram">Word to anagram</label>
+    <input id="anagram" name="anagram" class="form-control" type="text" size="30">
+  </br>
+</br>
+<label for="anagram">Words list</label>
+<input id="word_list" name="word_list" class="form-control" type="text" size="45">
+</div>
+
+</br>
+</br>
+<input name="submit" type="submit" class="btn btn-primary" value="Palindrome">
+</form>
+
+</br>
+</br>
+<form action='/anagram_out' align="center">
+  <div class="form-group">
+    <label for="anagram">Word to anagram</label>
+    <input id="anagram" name="anagram" class="form-control" type="text" size="30">
+  </br>
+</br>
+<label for="anagram">Words list</label>
+<input id="word_list" name="word_list" class="form-control" type="text" size="45">
+</div>
+
+</br>
+</br>
+<input name="submit" type="submit" class="btn btn-primary" value="Anagram">
 </form>
 </br>
 </br>
+<form action='/coins_out' align="center">
+  <div class="form-group">
+    <label for="coins">Number of Pennies</label>
+    <input id="coins" name="coins" class="form-control" type="text">
+  </div>
 </br>
-<form action="/fnr_form" align="center">
-  <input id="fnr_form" type="submit" value="Find and Replace">
-</form>
-</br>
-</br>
-</br>
-<form action="/palindrome_form" align="center">
-  <input id="palindrome" type="submit" value="Palindrome">
-</form>
-</br>
-</br>
-<form action="/anagram_form" align="center">
-  <input id="anagram-button" type="submit" value="Anagram">
-</form>
-</br>
-</br>
-<form action="/coins" align="center">
-  <input id="coins-button" type="submit" value="Coins">
+<input class="btn btn-primary" id="coin" type="submit" value="Coin Counter">
 </form>
 </br>
 </br>
@@ -37,7 +146,7 @@
   <input id="pp_input" type="text" name="pp_input" placeholder="Number for Ping Pong!">
 </br>
 </br>
-  <input id="ping_pong" type="submit" value="Ping Pong">
+  <input class="btn btn-primary" id="ping_pong" type="submit" value="Ping Pong">
 </form>
 </br>
 </br>
@@ -50,7 +159,7 @@
   <input id="attacker_y" type="text" name="attacker_y" placeholder="Attacker's y" size="8">
 </br>
 </br>
-  <input id="queen_attack" type="submit" value="Queen Attack">
+  <input class="btn btn-primary" id="queen_attack" type="submit" value="Queen Attack">
 </form>
 </br>
 </br>
@@ -60,17 +169,34 @@
   <input id="clock_float" type="text" name="c_minutes" placeholder="minutes">
 </br>
 </br>
-  <input id="clock" type="submit" value="Clock Angle">
+  <input class="btn btn-primary" id="clock" type="submit" value="Clock Angle">
 </form>
 </br>
 </br>
-<form action="/scrabble_form" align="center">
-  <input id="clock" type="submit" value="Scrabble Page">
+<form action="/scrabble_results">
+  <label for="word">Enter a word to get the scrabble score!</label>
+</br>
+  <input id="word" name="word" type="text">
+  <input name="submit" type="submit" class="btn btn-primary" value="Scrabble">
 </form>
 </br>
 </br>
-<form action="/wf_form" align="center">
-  <input id="clock" type="submit" value="Word Frequency">
+<form action='/wf_result' align="center">
+  <div class="form-group">
+    <label for="input_string">
+      Enter a bunch of text:
+    </label>
+    <input id="input_string" name="input_string" class="form-control" type="text" size="30">
+  </br>
+</br>
+<label for="findme">
+  Now enter a word to search for:
+</label>
+<input id="findme" name="findme" class="form-control" type="text" size="45">
+</div>
+</br>
+</br>
+<button type="submit" class="btn-success" value="Word Frequency">Find em!</button>
 </form>
-
-
+</br>
+</br>

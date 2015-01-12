@@ -12,10 +12,12 @@ require('./lib/scrabble')
 require('./lib/word_frequency')
 require('./lib/highlight')
 
+=begin
 configure :development do
 set :bind, '0.0.0.0'
 set :port, 3000 # Not really needed, but works well with the "Preview" menu option
 end
+=end
 
 
 get ('/') do
@@ -34,7 +36,7 @@ get('/rochambeau_result_1p') do
   @roch_result = (params.fetch('object').to_i).rochambeau(rand(2))
   erb(:rochambeau_result)
 end
-  
+
 get('/rochambeau_result_2p') do
   @roch_result = (params.fetch('object').to_i).rochambeau((params.fetch('object2').to_i))
   erb(:rochambeau_result)
@@ -78,7 +80,7 @@ get('/coins_out') do
 end
 
 get('/ping-pong') do
-  @pp_out = params.fetch('pp_input').ping_pong()
+  @pp_out = (params.fetch('pp_input').to_i).ping_pong()
   erb(:ping_pong_show)
 end
 
@@ -103,7 +105,7 @@ get ('/scrabble_results') do
 @score = params.fetch('word').scrabble
 erb(:scrabble_results)
 end
-  
+
 get('/wf_form') do
 erb(:wf_form)
 end
@@ -115,5 +117,3 @@ get('/wf_result') do
 @input_string = @input_string.highlight(@findme)
 erb(:wf_result)
 end
-
-  
