@@ -1,14 +1,43 @@
 <h1>Epicodus Projects</h1>
-</br>
-</br>
 
-<div id="Rochambeau">
-  <form action="/rochambeau_result_1p" align="center">
-    <table align="center" class="table table-condensed">
+
+
+<div id="Rochambeau_1p">
+  <form action="/rochambeau_result_1p">
+    <table>
+      <tr>
+        <td>
+            <div class="radio">
+            <label><input type="radio" name="object" value=0>Rock</label>
+          </div>
+        </td>
+        <td>
+          <div class="radio">
+            <label>
+              <input type="radio" name="object" value=2>Paper</label>
+          </div>
+        </td>
+        <td>
+          <div class="radio">
+            <label><input type="radio" name="object" value=1>Scissors</label>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <input id="submit" type="submit" value="RPS vs CPU">
+  </form>
+</div>
+
+
+
+
+<div id="Rochambeau_2p">
+  <form action="/rochambeau_result_2p">
+    <table>
       <tr>
         <td>
           <div class="radio">
-          <label><input type="radio" name="object" value=0>Rock</label>
+            <label><input type="radio" name="object" value=0>Rock</label>
         </div>
       </td>
       <td>
@@ -22,36 +51,7 @@
         </div>
       </td>
     </tr>
-
-  </table>
-
-<input class="btn btn-primary" id="submit" type="submit" value="RPS vs CPU">
-</form>
-</br>
-</br>
-<form action="/rochambeau_result_2p" align="center">
-
-  <table align="center" class="table table-condensed">
-
-    <tr>
-      <td>
-        <div class="radio">
-          <label><input type="radio" name="object" value=0>Rock</label>
-        </div>
-      </td>
-      <td>
-        <div class="radio">
-          <label><input type="radio" name="object" value=2>Paper</label>
-        </div>
-      </td>
-      <td>
-        <div class="radio">
-          <label><input type="radio" name="object" value=1>Scissors</label>
-        </div>
-      </td>
-    </tr>
-
-    <table align="center" class="table table-condensed">
+    <table >
       <tr>
         <td>
           <div class="radio">
@@ -70,133 +70,102 @@
         </td>
       </tr>
     </table>
-
-    <input class="btn btn-primary" id="submit" type="submit" value="RPS 2 Player" >
+    <input id="submit" type="submit" value="RPS 2 Player" >
   </form>
-</br>
-</br>
-</br>
-
-<form action="/fnr_out" align="center">
-
-  <div class="form-group">
-    <label for="text">Text:</label>
-    <input id="text" name="text" class="form-control" type="text">
-  </div>
-
-  <div class="form-group">
-    <label for="find">Word to find:</label>
-    <input id="find" name="find" class="form-control" type="text">
-  </div>
-
-  <div class="form-group">
-    <label for="replacement">Word to replace it with:</label>
-    <input id="replacement" name="replacement" class="form-control" type="text">
-  </div>
-
-</br>
-
-<input class="btn btn-primary" id="submit" type="submit" value="DO IT!">
-</form>
-
-<form action='/anagram_out' align="center">
-  <div class="form-group">
-    <label for="anagram">Word to anagram</label>
-    <input id="anagram" name="anagram" class="form-control" type="text" size="30">
-  </br>
-</br>
-<label for="anagram">Words list</label>
-<input id="word_list" name="word_list" class="form-control" type="text" size="45">
 </div>
 
-</br>
-</br>
-<input name="submit" type="submit" class="btn btn-primary" value="Palindrome">
-</form>
-
-</br>
-</br>
-<form action='/anagram_out' align="center">
-  <div class="form-group">
-    <label for="anagram">Word to anagram</label>
-    <input id="anagram" name="anagram" class="form-control" type="text" size="30">
-  </br>
-</br>
-<label for="anagram">Words list</label>
-<input id="word_list" name="word_list" class="form-control" type="text" size="45">
+<div id="Find_And_Replace">
+  <form action="/fnr_out">
+    <div class="form-group">
+      <label for="text">Text:</label>
+      <input id="text" name="text" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="find">Word to find:</label>
+      <input id="find" name="find" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="replacement">Word to replace it with:</label>
+      <input id="replacement" name="replacement" class="form-control" type="text">
+    </div>
+    <input  id="submit" type="submit" value="DO IT!">
+  </form>
 </div>
 
-</br>
-</br>
-<input name="submit" type="submit" class="btn btn-primary" value="Anagram">
-</form>
-</br>
-</br>
-<form action='/coins_out' align="center">
-  <div class="form-group">
-    <label for="coins">Number of Pennies</label>
-    <input id="coins" name="coins" class="form-control" type="text">
-  </div>
-</br>
-<input class="btn btn-primary" id="coin" type="submit" value="Coin Counter">
-</form>
-</br>
-</br>
-<form action="/ping-pong" align="center">
-  <input id="pp_input" type="text" name="pp_input" placeholder="Number for Ping Pong!">
-</br>
-</br>
-  <input class="btn btn-primary" id="ping_pong" type="submit" value="Ping Pong">
-</form>
-</br>
-</br>
-<form action="/queen_attack" align="center">
-</br>
-  <input id="queen_x" type="text" name="queen_x" placeholder="Queen's x" size="5">
-  <input id="attacker_x" type="text" name="attacker_x" placeholder="Attacker's x" size="8">
-</br>
-  <input id="queen_y" type="text" name="queen_y" placeholder="Queen's y" size="5">
-  <input id="attacker_y" type="text" name="attacker_y" placeholder="Attacker's y" size="8">
-</br>
-</br>
-  <input class="btn btn-primary" id="queen_attack" type="submit" value="Queen Attack">
-</form>
-</br>
-</br>
-<form action="/clock" align="center">
-  <input id="clock_float" type="text" name="c_hours" placeholder="hours">
-</br>
-  <input id="clock_float" type="text" name="c_minutes" placeholder="minutes">
-</br>
-</br>
-  <input class="btn btn-primary" id="clock" type="submit" value="Clock Angle">
-</form>
-</br>
-</br>
-<form action="/scrabble_results">
-  <label for="word">Enter a word to get the scrabble score!</label>
-</br>
-  <input id="word" name="word" type="text">
-  <input name="submit" type="submit" class="btn btn-primary" value="Scrabble">
-</form>
-</br>
-</br>
-<form action='/wf_result' align="center">
-  <div class="form-group">
-    <label for="input_string">
-      Enter a bunch of text:
-    </label>
-    <input id="input_string" name="input_string" class="form-control" type="text" size="30">
-  </br>
-</br>
-<label for="findme">
-  Now enter a word to search for:
-</label>
-<input id="findme" name="findme" class="form-control" type="text" size="45">
+<div id="Anagram">
+
+  <form action="/palindrome_result" >
+    <div class="form-group">
+      <label for="palindrome">Want to know if it's a palindrome?</label>
+      <input id="palindrome" name="palindrome" class="form-control" type="text">
+    </div>
+    <input id="submit" type="submit" value="Palindrome">
+  </form>
 </div>
-</br>
-</br>
-<button type="submit" class="btn-success" value="Word Frequency">Find em!</button>
-</form>
-</br>
-</br>
+
+<div id="Anagram">
+  <form action='/anagram_out' >
+    <div class="form-group">
+      <label for="anagram">Word to anagram</label>
+      <input id="anagram" name="anagram" class="form-control" type="text" size="30">
+      <label for="anagram">Words list</label>
+      <input id="word_list" name="word_list" class="form-control" type="text" size="45">
+    </div>
+    <input name="submit" type="submit"  value="Anagram">
+  </form>
+</div>
+
+<div id="Coins_Counter">
+  <form action='/coins_out' >
+    <div class="form-group">
+      <label for="coins">Number of Pennies</label>
+      <input id="coins" name="coins" class="form-control" type="text">
+    </div>
+      <input  id="coin" type="submit" value="Coin Counter">
+  </form>
+</div>
+
+<div id="Ping_Pong">
+  <form action="/ping-pong" >
+    <input id="pp_input" type="text" name="pp_input" placeholder="Number for Ping Pong!">
+  <input  id="ping_pong" type="submit" value="Ping Pong">
+  </form>
+</div>
+
+<div id="Queen_Attack">
+  <form action="/queen_attack" >
+    <input id="queen_x" type="text" name="queen_x" placeholder="Queen's x" size="5">
+    <input id="attacker_x" type="text" name="attacker_x" placeholder="Attacker's x" size="8">
+    <input id="queen_y" type="text" name="queen_y" placeholder="Queen's y" size="5">
+    <input id="attacker_y" type="text" name="attacker_y" placeholder="Attacker's y" size="8">
+    <input  id="queen_attack" type="submit" value="Queen Attack">
+  </form>
+</div>
+
+<div id="Clock Angle">
+  <form action="/clock" >
+    <input id="clock_float" type="text" name="c_hours" placeholder="hours">
+    <input id="clock_float" type="text" name="c_minutes" placeholder="minutes">
+    <input  id="clock" type="submit" value="Clock Angle">
+  </form>
+</div>
+
+<div id="Scrabble">
+  <form action="/scrabble_results">
+    <label for="word">Enter a word to get the scrabble score!</label>
+    <input id="word" name="word" type="text">
+    <input name="submit" type="submit"  value="Scrabble">
+  </form>
+</div>
+
+<div id="Word_Find">
+  <form action='/wf_result' >
+    <div class="form-group">
+      <label for="input_string">Enter a bunch of text:</label>
+      <input id="input_string" name="input_string" class="form-control" type="text" size="30">
+      <label for="findme">Now enter a word to search for:</label>
+      <input id="findme" name="findme" class="form-control" type="text" size="45">
+    </div>
+    <input name="submit" type="submit"  value="Word Frequency">
+  </form>
+</div>
