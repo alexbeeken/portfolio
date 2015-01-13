@@ -12,6 +12,7 @@ require('./lib/scrabble')
 require('./lib/word_frequency')
 require('./lib/highlight')
 require('./lib/parcels')
+require('./lib/triangle')
 
 
 configure :development do
@@ -125,4 +126,12 @@ get('/parcels') do
   @length = params.fetch('length').to_i
   @cost = Parcel.new(@width, @height, @length).cost_to_ship
   erb(:parcel_out)
+end
+
+get('/triangle') do
+  @a = params.fetch('a').to_i
+  @b = params.fetch('b').to_i
+  @c = params.fetch('c').to_i
+  @triangle_result = Triangle.new(@a, @b, @c)
+  erb(:triangle_out)
 end
