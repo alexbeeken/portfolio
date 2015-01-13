@@ -119,10 +119,10 @@ get('/wf_result') do
 erb(:wf_result)
 end
 
-get('parcels') do
-  @height = params.fetch('height')
-  @width = params.fetch('width')
-  @length = params.fetch('length')
+get('/parcels') do
+  @height = params.fetch('height').to_i
+  @width = params.fetch('width').to_i
+  @length = params.fetch('length').to_i
   @cost = Parcel.new(@width, @height, @length).cost_to_ship
-end
+  erb(:parcel_out)
 end
