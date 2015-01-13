@@ -11,6 +11,7 @@ require('./lib/rochambeau')
 require('./lib/scrabble')
 require('./lib/word_frequency')
 require('./lib/highlight')
+require('./lib/parcels')
 
 
 configure :development do
@@ -116,4 +117,12 @@ get('/wf_result') do
 @final_count = (@input_string.word_frequency(@findme))
 @input_string = @input_string.highlight(@findme)
 erb(:wf_result)
+end
+
+get('parcels') do
+  @height = params.fetch('height')
+  @width = params.fetch('width')
+  @length = params.fetch('length')
+  @cost = Parcel.new(@width, @height, @length).cost_to_ship
+end
 end
